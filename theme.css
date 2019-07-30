@@ -1,0 +1,231 @@
+/* TARDIS Theme v1.0.0
+#
+# https://github.com/brendonmm/tardis-theme
+#
+# @author Brendo Marinho <brendonmm@outlook.com>
+#
+*/
+
+:root {
+    --link: #bd93f9;
+    --light: #f8f8f2;
+    --tag: #ff79c6;
+    --white: #fff;
+    --property: #66d9ef;
+    --attribute: #66d9ef;
+    --string: #f1fa8c;
+    --variable: #50fa7b;
+    --focused: #6272a4;
+    --default: #282a36;
+    --accent: #44475a;
+    --error: #ff5555;
+}
+
+.cm-string, .cm-string-2 {
+    color: var(--string);
+}
+
+.cm-error {
+    background: var(--error);
+    color: var(--light) !important;
+}
+
+.cm-meta {
+    color: var(--light);
+}
+
+.cm-comment {
+    color: var(--focused);
+}
+
+.cm-tag {
+    color: var(--tag) !important;
+}
+
+.cm-atom,
+.cm-number,
+.cm-link {
+    color: var(--link);
+}
+
+.cm-property {
+    color: var(--property);
+}
+
+.cm-attribute {
+    color: var(--attribute);
+}
+
+.cm-keyword {
+    color: var(--tag);
+}
+
+.cm-string.cm-property {
+    color: var(--string);
+}
+
+.cm-variable {
+    color: var(--variable);
+}
+
+.cm-variable-2 {
+    color: var(--white);
+}
+
+.cm-variable-3 {
+    color: var(--string);
+}
+
+.cm-qualifier {
+    color: var(--variable);
+}
+
+.cm-builtin {
+    color: var(--variable);
+}
+
+.cm-operator {
+    color: var(--tag);
+}
+
+.cm-tag {
+    color: var(--error);
+}
+
+.cm-def {
+    color: var(--variable);
+}
+
+.cm-bracket {
+    color: var(--light);
+}
+
+/**
+ * User Interface
+ * ==============
+ *
+ * @TODO Matching words
+ * @TODO Scrollbars
+ * @TODO Find highlights
+ */
+.CodeMirror,
+.CodeMirror .CodeMirror-scroll {
+    background-color: var(--default);
+    color: var(--light);
+}
+
+#not-editor,
+#image-holder {
+    background-color: var(--default);
+    color: var(--light);
+    transition: background-color 0.3s ease-out;
+}
+
+.CodeMirror {
+    border-left-color: var(--default);
+}
+
+div.CodeMirror-selected {
+    background: var(--accent) !important;
+}
+
+.CodeMirror, .CodeMirror-gutters {
+  background-color: var(--default) !important;
+  color: var(--light) !important;
+  border: none;
+}
+
+.CodeMirror-gutters {
+    border-right: 0px;
+}
+
+.CodeMirror-guttermarker {
+    color: var(--light);
+}
+
+.CodeMirror-guttermarker-subtle {
+    color: var(--default);
+}
+
+.CodeMirror-linenumber {
+    color: var(--focused);
+}
+
+.CodeMirror-cursor {
+    border-left: solid thin var(--light) !important;
+}
+
+.CodeMirror-activeline-background,
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    background: var(--accent) !important;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    color: var(--light);
+}
+
+.CodeMirror-focused .CodeMirror-activeline .inline-widget .CodeMirror-gutter-elt {
+    color: var(--focused);
+}
+
+.CodeMirror-matchingbracket {
+    background-color: transparent !important;
+    border-bottom: 1px solid; /* text-decoration: underline does not look that well with large font sizes */
+    color: var(--white) !important;
+    padding-bottom: 0.166em;
+}
+
+.CodeMirror-matchingtag {
+    background-color: transparent;
+    border-bottom: 1px solid var(--light); /* text-decoration: underline does not look that well with large font sizes */
+    padding-bottom: 0.166em;
+}
+
+/**
+ * Extensions
+ * ==========
+ */
+
+/*
+ * Brackets-Vim (https://github.com/megalord/brackets-vim)
+ * -------------------------------------------------------
+ */
+.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor {
+    background: rgba(248, 248, 242, 0.5) !important;
+}
+
+/**
+ * Show Whitespace (https://github.com/DennisKehrig/brackets-show-whitespace)
+ * --------------------------------------------------------------------------
+ */
+.CodeMirror .cm-dk-whitespace-space::before,
+.CodeMirror .cm-dk-whitespace-tab::before,
+.CodeMirror .cm-dk-whitespace-leading-space::before,
+.CodeMirror .cm-dk-whitespace-leading-tab::before,
+.CodeMirror .cm-dk-whitespace-trailing-space::before,
+.CodeMirror .cm-dk-whitespace-trailing-tab::before {
+    background-color: var(--accent) !important;
+}
+
+/**
+ * Code Folding (https://github.com/thehogfather/brackets-code-folding)
+ * --------------------------------------------------------------------
+ */
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter-blank,
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-open {
+    color: var(--accent);
+}
+
+.CodeMirror-foldgutter-open::after {
+    content: "\25bd";
+}
+
+.CodeMirror-foldmarker {
+    background-color: var(--default);
+    border-color: var(--accent);
+    color: var(--accent);
+    padding: 0 10px;
+}

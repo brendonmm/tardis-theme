@@ -1,0 +1,14 @@
+{
+    "title": "TARDIS Theme",
+    "name": "tardis-theme",
+    "description": "A brand new Brackets Theme based in Default Dark Theme",
+    "version": "1.0.0",
+    "author": "Brendo Marinho <brendonmm@outlook.com>",
+    "engines": {
+        "brackets": ">=1.4.0"
+    },
+    "theme": {
+        "file": "main.css",
+        "dark": true
+    }
+}
